@@ -74,6 +74,7 @@ class App extends React.Component {
     this.sendBackgroundMessage('clear_capture');
     this.sendBackgroundMessage('start_capture');
     this.setUpdateInterval();
+    //console.log("Recording"); 
   }
 
   stopRecording() {
@@ -105,7 +106,7 @@ class App extends React.Component {
               type='button'
               className={'btn ' + (isRecording ? 'btn-danger' : 'btn-primary')}
               onClick={this.handleClick}>
-              {isRecording ? 'Stop' : 'Record'}
+              {isRecording ? 'Disable' : 'Enable'}
             </button>
             <button
               type='button'
@@ -114,13 +115,12 @@ class App extends React.Component {
               Clear
             </button>
             <br />
-            <br />
           </div>
         </div>
         <hr />
         <div className='row'>
           <div className='col-12'>
-            {metrics && metrics.length ? <MetricsTable metrics={metrics} /> : 'No Metrics Recorded'}
+            {metrics && metrics.length ? <MetricsTable metrics={metrics} /> : 'No Similar Queries Found (Yet)'}
           </div>
         </div>
       </div>

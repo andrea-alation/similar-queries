@@ -1,7 +1,7 @@
 {
-  "name": "Alation Metrics Recorder",
+  "name": "Alation Similar Queries",
   "version": "0.1",
-  "description": "Records metrics from Alation servers and displays them through UI",
+  "description": "Captures compose queries in Alation and finds similar queries",
   "background": {
     "scripts": ["background.js"],
     "persistent": true
